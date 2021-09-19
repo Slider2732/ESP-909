@@ -18,6 +18,7 @@ Swing - crudimentarily implemented with a pot for now. Intention is to follow Ro
 MIDI to follow, being worked on for MIDI In and MIDI Out <br>
 81% prog memory used - other old skool drumkits are intended to be able to be used in a future update <br>
 
-Fritzing or similar schematic to be uploaded.
+Fritzing or similar schematic to be uploaded. <br>
+Prototype build picture to be uploaded.
 
 Code is commented.
