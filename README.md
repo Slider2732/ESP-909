@@ -7,7 +7,7 @@ A work in progress - but it does work.
 The project uses just a Wemos D1 Mini (ESP8266) and a 16 port 4067 multiplexer.
 Thanks to Jack Wildchurch for the usability emphasis!
 
-Currently - 
+Currently - <br>
 2 selectable patterns at a pot selected tempo <br>
 16th's pattern length <br>
 LED BPM indicator <br>
