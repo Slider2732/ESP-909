@@ -21,6 +21,6 @@ MIDI to follow, being worked on for MIDI In and MIDI Out <br>
 Fritzing or similar schematic to be uploaded. <br>
 
 
-<img> https://www.dropbox.com/s/rx1y64o9r2itt1z/IMG_3744.JPG?dl=0 </img>
+<img> https://www.dropbox.com/s/rx1y64o9r2itt1z/IMG_3744.JPG </img>
 
 Code is commented.
