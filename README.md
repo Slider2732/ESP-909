@@ -14,6 +14,7 @@ Live mode and Record mode  <br>
 LED BPM and Live mode indicator <br>
 Play/Pause button <br>
 Easy pattern swap button (on right side end of drum buttons) <br>
+Pattern Copy, from pattern 1 to pattern 2 <br>
 All 11 TR-909 sounds at 44.1kHz <br>
 Beat delete, by pressing the same input button at a location as pressed to enable it <br>
 Swing - crudimentarily implemented with a pot for now. Intention is to follow Roger Linn's % method <br>
@@ -21,6 +22,7 @@ MIDI to follow, being worked on for MIDI In and MIDI Out <br>
 81% prog memory used - other old skool drumkits are intended to be able to be used in a future update <br>
 
 Fritzing or similar schematic to be uploaded. <br>
+Reference Manual to be uploaded. <br>
 Code is commented. <br>
 
 <img src ="./IMG_3744.JPG" raw=true />
