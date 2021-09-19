@@ -33,7 +33,7 @@ MIDI Out clock
 // Code tidied
 
 // Todo:
-// Copy pattern 1 to pattern 2
+// Chain pattern 1 to pattern 2
 // Global pitch, pot on port[14] 
 // BD detune on port[13]
 // Add reverb code - tried, issues
@@ -117,6 +117,7 @@ int swingAmount;
 //long int timeStart;
 int timeRemain;
 int livePlay;
+int chain = 0;
 
 int counter1 = 1;
 int counter2 = 16;
@@ -18213,6 +18214,11 @@ void Drums()
      playFlag = 0;
     }
 
+
+  if(chain == 1)
+    { counter1 = 1; counter2 = 32; }
+    
+
   if (playFlag == 1)
     {     
      for (c = counter1; c <= counter2; c++)
@@ -18225,10 +18231,10 @@ void Drums()
             }
 
             // Pattern select
-            if (port[11] >= 800 && pattern == 2) 
-              { counter1 = 1; counter2 = 16; pattern = 1; delay(tempo); Drums();}
-            if (port[11] >= 800 && pattern == 1)
-              { counter1 = 17; counter2 = 32; pattern = 2; delay(tempo); Drums();} 
+            if (port[11] >= 800 && pattern == 2 && chain == 0) 
+              { counter1 = 1; counter2 = 16; pattern = 1; delay(tempo *2); Drums();}
+            if (port[11] >= 800 && pattern == 1 && chain == 0)
+              { counter1 = 17; counter2 = 32; pattern = 2; delay(tempo *2); Drums();} 
 
 
             
@@ -18408,6 +18414,30 @@ void LivePlay()
            }
           
 
+          // Chain patterns
+          if(port[1] >= 800 && port[11] >= 800 && chain == 0)
+            {
+             chain = 1;
+             digitalWrite(LED, LOW); 
+             CP16CNT = 0;
+             OH16CNT = 0;
+             delay(1000);
+             yield();
+             digitalWrite(LED, HIGH); 
+             Drums();
+            }
+
+            if(port[1] >= 800 && port[11] >= 800 && chain == 1)
+            {
+             chain = 0;
+             digitalWrite(LED, LOW); 
+             CP16CNT = 0;
+             RD16CNT = 0;
+             delay(1000);
+             yield();
+             digitalWrite(LED, HIGH); 
+             Drums();
+            }
 
  LivePlay();
 }
