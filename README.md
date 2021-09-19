@@ -19,6 +19,8 @@ MIDI to follow, being worked on for MIDI In and MIDI Out <br>
 81% prog memory used - other old skool drumkits are intended to be able to be used in a future update <br>
 
 Fritzing or similar schematic to be uploaded. <br>
-Prototype build picture to be uploaded.
+
+
+https://www.dropbox.com/s/rx1y64o9r2itt1z/IMG_3744.JPG?dl=0
 
 Code is commented.
