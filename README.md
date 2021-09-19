@@ -8,10 +8,11 @@ The project uses just a Wemos D1 Mini (ESP8266) and a 16 port 4067 multiplexer.
 Thanks to Jack Wildchurch for the usability emphasis!
 
 Currently - <br>
-2 seperate user created patterns at a pot selected tempo <br>
+2 seperate user creatable patterns at a pot selected tempo <br>
 16th's pattern length <br>
 LED BPM indicator <br>
 Live mode and Record mode  <br>
+Play/Pause button <br>
 All 11 TR-909 sounds at 44.1kHz <br>
 Beat delete, by pressing the same input button at a location as pressed to enable it <br>
 Swing - crudimentarily implemented with a pot for now. Intention is to follow Roger Linn's % method <br>
