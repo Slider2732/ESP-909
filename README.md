@@ -8,6 +8,7 @@ The project uses just a Wemos D1 Mini (ESP8266) and a 16 port 4067 multiplexer.
 Thanks to Jack Wildchurch for the usability emphasis!
 
 Currently - <br>
+All 11 TR-909 sounds at 44.1kHz <br>
 2 different user creatable patterns at a pot selected tempo <br>
 16th's pattern length <br>
 Live mode and Record mode  <br>
@@ -15,7 +16,6 @@ LED BPM and Live mode indicator <br>
 Play/Pause button <br>
 Easy pattern swap button (on right side end of drum buttons) <br>
 Pattern Copy, from pattern 1 to pattern 2 <br>
-All 11 TR-909 sounds at 44.1kHz <br>
 Beat delete, by pressing the same input button at a location as pressed to enable it <br>
 Swing - crudimentarily implemented with a pot for now. Intention is to follow Roger Linn's % method <br>
 MIDI to follow, being worked on for MIDI In and MIDI Out <br>
