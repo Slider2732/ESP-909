@@ -13,7 +13,7 @@ Currently - <br>
 Live mode and Record mode  <br>
 LED BPM and Live mode indicator <br>
 Play/Pause button <br>
-Easy pattern swap button (on right side end of drum buttons)
+Easy pattern swap button (on right side end of drum buttons) <br>
 All 11 TR-909 sounds at 44.1kHz <br>
 Beat delete, by pressing the same input button at a location as pressed to enable it <br>
 Swing - crudimentarily implemented with a pot for now. Intention is to follow Roger Linn's % method <br>
