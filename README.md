@@ -1,5 +1,6 @@
 # ESP-909
-Building upon Jan Ostman's codebase for the ESP8266
+Building upon Jan Ostman's codebase for the ESP8266.
+
 Archive.org link: to be added - Archive.org are offline as of 13:30 Sunday 19th Sept 2021
 
 A work in progress - but it does work.
