@@ -19,7 +19,7 @@ Pattern Copy, from pattern 1 to pattern 2 <br>
 Pattern Chain, add pattern 2 to the end of pattern 1 <br>
 Beat delete, by pressing the same input button at the same location pressed when enabling it <br>
 Swing - crudimentarily implemented with a pot for now. Intention is to follow Roger Linn's % method <br>
-Reset button (GND and Reset) Surprisingly handy during a session <br>
+Reset button (GND and RST) Surprisingly handy during a session <br>
 MIDI to follow, being worked on for MIDI In and MIDI Out <br>
 81% prog memory used - other old skool drumkits are intended to be able to be used in a future update <br>
 
