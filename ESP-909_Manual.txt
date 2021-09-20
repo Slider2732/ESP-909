@@ -5,7 +5,6 @@ Slider2732 - September 2021
 
 Contents
 --------
-
 Play It!
 Pattern Copy
 Pattern Chain
@@ -19,7 +18,6 @@ Construction notes
 
 Play It!
 --------
-
 When the USB cable is connected to the ESP8266, the unit powers up into Live Play mode.
 Live Play mode is denoted by the LED being constantly lit. 
 Press any drum button to hear each sound, practice patterns, add a live layer to a pre-recorded track etc.
