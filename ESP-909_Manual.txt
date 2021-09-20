@@ -75,7 +75,7 @@ For now, it allows useful timing variations and experimentation with pattern str
 MIDI
 ----
 MIDI In and Out are implemented, but so far are proving difficult to get running.
-Jan Ostman's initial codebase for ESP-909 includes MIDI functionality and somehwere along development I may have borked it!
+Jan Ostman's initial codebase for ESP-909 includes MIDI functionality and somewhere along development I may have borked it!
 This manual will be updated when it's fixed. It may work for you as it stands, my MIDI circuit is homemade from salvaged components. 
 MIDI commands in both directions will be Start/Stop, Pause and Note data. 
 
@@ -96,18 +96,17 @@ MIDI circuit (Sparkfun/Adafruit etc, or homemade)
 100uF 16V capacitor
 1nF (103) ceramic capacitor
 1x LED, with 100 ohm resistor to protect it
-
 2 pin connector 
 Large perfboard (12cm x 18cm)
 
-The layout is up to you, here is how the prototype circuit is arranged-
+The layout is up to you, here is how the prototype circuit is arranged -
 Top left is the Wemos D1 Mini, underneath the board. 
 Output audio is from the RX pin, the audio filter consisting of 100uF electrolytic cap and 1nf ceramic cap are connected to it. A 2 pin header connector is a simple way to enable or disable the RX pin for code uploads. 
 Top middle is the MIDI circuit. 
 Top right is the Reset button, connected to GND and RST on the Wemos D1 Mini.
 Middle left are the Tempo pot (5K), LED, Swing pot (5K) and an unused pot, perhaps for reverb or pitch later in development.  
 Middle right are the Record/Live mode button and Play/Pause button.
-Bottom row is for the drum sounds, 1 button persound, matching the placement of the TR-909 drum sounds. 
+Bottom row is for the drum sounds, 1 button per sound, matching the placement of the TR-909 drum sounds. 
 Bottom row right, is the Function button.
 
 A look through the code will determine the correct connections. 
