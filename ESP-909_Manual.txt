@@ -82,7 +82,6 @@ MIDI commands in both directions will be Start/Stop, Pause and Note data.
 
 Construction Notes
 ------------------
-
 With reference to the prototype build picture on Github. 
 
 Components required -
