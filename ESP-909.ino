@@ -23,11 +23,7 @@ MIDI Out clock
 
 
 // This version:
-// Copy pattern
-// Added 2nd pattern/ fill pattern
-// Added drum delete 
-// Added Swing
-// Live Play done
+// Fixed hangup when patterns changed - can be changed on any beat
 // Begin MIDI implementation
 // Various usability improvements
 // Code tidied
@@ -114,7 +110,7 @@ int playRate;
 int oldplayRate;
 int pattern = 1;
 int swingAmount;
-//long int timeStart;
+long int timeStart;
 int timeRemain;
 int livePlay;
 int chain = 0;
@@ -18230,12 +18226,14 @@ void Drums()
              yield();
             }
 
-            // Pattern select
-            if (port[11] >= 800 && pattern == 2 && chain == 0) 
-              { counter1 = 1; counter2 = 16; pattern = 1; delay(tempo *2); Drums();}
-            if (port[11] >= 800 && pattern == 1 && chain == 0)
-              { counter1 = 17; counter2 = 32; pattern = 2; delay(tempo *2); Drums();} 
-
+  if(millis() > timeStart + 500)
+    {
+     // Pattern select
+     if (port[11] >= 800 && pattern == 2 && chain == 0) 
+       { counter1 = 1; counter2 = 16; pattern = 1; timeStart = millis(); Drums();}
+     if (port[11] >= 800 && pattern == 1 && chain == 0)
+       { counter1 = 17; counter2 = 32; pattern = 2; timeStart = millis(); Drums();} 
+    }
 
             
          if(c == 1 || c == 17)
@@ -18273,7 +18271,7 @@ void Drums()
        // https://www.attackmagazine.com/features/interview/roger-linn-swing-groove-magic-mpc-timing/
 
        // Temporary Swing
-       swingAmount = port[13] / 50;
+       swingAmount = port[13] / 40;
          
 
        
