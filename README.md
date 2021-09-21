@@ -1,10 +1,10 @@
 # ESP-909
-Building upon Jan Ostman's Arduino IDE codebase for the ESP8266. <br>
+Building upon Jan Ostman's Arduino IDE drum machine codebase for the ESP8266. <br>
 Archive.org link: https://web.archive.org/web/20190917184506/http://blog.dspsynth.eu/audio-hacking-on-the-esp8266/
 
 
-A work in progress - but it does work as a drum machine.
-The project uses a Wemos D1 Mini (ESP8266) and a 16 port 4067 multiplexer.
+A work in progress - but it does work as a drum machine. <br>
+The project uses a Wemos D1 Mini (ESP8266) and a 16 port 4067 multiplexer. <br>
 Thanks to Jack Wildchurch for the usability emphasis!
 
 Currently - <br>
