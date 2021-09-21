@@ -18213,7 +18213,7 @@ void Drums()
 
   if(chain == 1)
     { counter1 = 1; counter2 = 32; }
-    
+  
 
   if (playFlag == 1)
     {     
@@ -18418,7 +18418,7 @@ void LivePlay()
              chain = 1;
              digitalWrite(LED, LOW); 
              CP16CNT = 0;
-             OH16CNT = 0;
+             CR16CNT = 0;
              delay(1000);
              yield();
              digitalWrite(LED, HIGH); 
@@ -18428,9 +18428,10 @@ void LivePlay()
             if(port[1] >= 800 && port[11] >= 800 && chain == 1)
             {
              chain = 0;
+             counter1 = 1; counter2 = 16;
              digitalWrite(LED, LOW); 
              CP16CNT = 0;
-             RD16CNT = 0;
+             CR16CNT = 0;
              delay(1000);
              yield();
              digitalWrite(LED, HIGH); 
