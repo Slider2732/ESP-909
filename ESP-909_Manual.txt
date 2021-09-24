@@ -27,6 +27,7 @@ Press button 2 (Snare) along with Function to execute Pattern Chain.
 More features are intended to be added.
 When ready to record, press the Record/Live mode button.
 Tempo can be set with the relevant pot, BPM indication is with a flash of the LED on positions 1, 9 and 11 of the 16 part pattern.
+Tempo can also be set with the Tap Tempo feature detailed below.
 Each drum sound will be quantized to 1/16th of the pattern.
 If unhappy with a sound, press the same button again to remove it (easiest if the tempo is temporarily lowered).
 Variations in swing (shuffle) can be made by using the Swing pot.
@@ -38,6 +39,7 @@ To reset the drum machine, press the Reset button.
 
 Pattern Copy
 ------------
+Change the mode to Live play mode, by pressing the mode button (attached to C14 of the multiplexer).
 Press button 1 (Bass Drum) along with Function.
 Pattern 1 will be copied to pattern 2.
 The LED will flash a sequence and a sound will be heard.
@@ -46,6 +48,7 @@ Returning to Record mode using the Record mode button will result in both patter
 
 Pattern Chain
 -------------
+Change the mode to Live play mode, by pressing the mode button (attached to C14 of the multiplexer).
 Press button 2 (Snare Drum) along with Function.
 Pattern 2 will be added to the end of pattern 1.
 The pattern length of the sequence will now be 32 beats. 
@@ -56,10 +59,20 @@ N.B. Pressing the Function button to swap to pattern 2 results in no action.
 
 Tempo
 -----
-Tempo is changed by using the Tempo pot.
+Tempo can be changed by using the Tempo pot.
 The range is approximately 40 BPM to 300 BPM.
 Indication of the tempo is given by the LED, with flashes on pattern positions 1,9 and 11.
 Original intentions were to use a bright flash plus several lower intensity flashes, more in keeping with a traditional metronome, but PWM didn't appear to play well when running within the code. Was fine on its own and is something to return to, to fix.  
+
+
+Tap Tempo
+---------
+Tempo can also be changed by using the Tap Tempo feature.
+Change the mode to Live play mode, by pressing the mode button (attached to C14 of the multiplexer).
+The range of BPM is 40 BPM up to however fast you can tap the relevant key/button!
+Press key/button 3 and then the Function button.
+The timer will count to 10seconds, during which time you should tap to the beat required for the BPM.
+The drum machine will then enter Play mode, where you will be able to see (and hear if beats are already present) the BPM.
 
 
 Swing
@@ -105,6 +118,8 @@ Middle left are the Tempo pot (5K), LED, Swing pot (5K) and an unused pot, perha
 Middle right are the Record/Live mode button and Play/Pause button.
 Bottom row is for the drum sounds, 1 button per sound, matching the placement of the TR-909 drum sounds. 
 Bottom row right, is the Function button.
+Due to the multiplexer having capacitance properties, you may find that low hight buttons will trigger another sound as well. The fix, is to use taller buttons, increase spacings, or, use PC key switches and caps. The prototype build was found to suffer from the issue, buttons being replaced by ALPS key switches from a late 1980's busted laptop. 
+
 
 A look through the code will determine the correct connections. 
 The code has been commented with hopefully useful information. 
