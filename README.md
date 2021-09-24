@@ -14,6 +14,7 @@ All 11 TR-909 sounds at 44.1kHz <br>
 Live mode and Record mode  <br>
 LED BPM and Live mode indicator <br>
 Play/Pause button <br>
+Tap tempo <br>
 Pattern Change (button on right side end of drum buttons) <br>
 Pattern Copy, from pattern 1 to pattern 2 <br>
 Pattern Chain, add pattern 2 to the end of pattern 1 <br>
