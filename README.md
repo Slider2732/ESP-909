@@ -30,7 +30,7 @@ Also, the drum pads allow playing nearly an octave of notes on a connected devic
 Fritzing or similar schematic to be uploaded. <br>
 A quick guide Manual has been uploaded (to be lightly updated and converted to PDF). <br>
 Code is commented. <br>
-Demo short track - FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work. In the track it's controlling a sequence on my Roland JU-06A. Recorded live to a Zoom R8 with no EQ. Synth line - Korg X5DR  :)
+Demo short track - FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work. In the track it's controlling a sequence on a Roland JU-06A. Recorded live to a Zoom R8 with no EQ. Synth line - Korg X5DR  :)
 
 <img src ="./IMG_3746.JPG" raw=true />
 
