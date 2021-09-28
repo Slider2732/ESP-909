@@ -33,6 +33,8 @@ A quick guide Manual has been uploaded (to be lightly updated and converted to P
 Code is commented. <br>
 Demo short track - FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work. In the track it's controlling a sequence on a Roland JU-06A. Recorded live to a Zoom R8 with no EQ. Synth line - Korg X5DR  :)
 
+
+
 <img src ="./IMG_3746.JPG" raw=true />
 
 
