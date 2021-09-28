@@ -28,9 +28,9 @@ Also, the drum pads allow playing nearly an octave of notes on a connected devic
 81% prog memory used - other old skool drumkits are intended to be able to be used in a future update <br>
 
 Fritzing or similar schematic to be uploaded. <br>
-A quick guide Manual has been uploaded. <br>
+A quick guide Manual has been uploaded (to be lightly updated and converted to PDF). <br>
 Code is commented. <br>
-Demo short track - FirstMIDI.mp3 is a quick demo of the sound of ESP-909, after getting MIDI to work  :)
+Demo short track - FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work. Recorded live to a Zoom R8 with no EQ. Sequence - JU-06A, Synth line - Korg X5DR  :)
 
 <img src ="./IMG_3746.JPG" raw=true />
 
