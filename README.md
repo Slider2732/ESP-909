@@ -15,18 +15,22 @@ Live mode and Record mode  <br>
 LED BPM and Live mode indicator <br>
 Play/Pause button <br>
 Tap tempo <br>
+Metronome, with on and off <br>
 Pattern Change (button on right side end of drum buttons) <br>
 Pattern Copy, from pattern 1 to pattern 2 <br>
 Pattern Chain, add pattern 2 to the end of pattern 1 <br>
 Beat delete, by pressing the same drum button at the same pattern location <br>
 Swing - crudimentarily implemented with a pot for now. Intention is to follow Roger Linn's % method <br>
 Reset button (GND and RST) Surprisingly handy during a session <br>
-MIDI to follow, being worked on for MIDI In and MIDI Out <br>
+MIDI Out - Tempo/Start/Stop <br>
+MIDI PPQN change, for devices with different clock timings. <br> 
+Also, the drum pads allow playing nearly an octave of notes on a connected device. Handy for things with no keyboard.
 81% prog memory used - other old skool drumkits are intended to be able to be used in a future update <br>
 
 Fritzing or similar schematic to be uploaded. <br>
 A quick guide Manual has been uploaded. <br>
 Code is commented. <br>
+Demo short track - FirstMIDI.mp3 is a quick demo of the sound of ESP-909, after getting MIDI to work  :)
 
 <img src ="./IMG_3746.JPG" raw=true />
 
