@@ -24,7 +24,7 @@ Swing - crudimentarily implemented with a pot for now. Intention is to follow Ro
 Reset button (GND and RST) Surprisingly handy during a session <br>
 MIDI Out - Tempo/Start/Stop <br>
 MIDI PPQN change, for devices with different clock timings. <br> 
-Also, the drum pads allow playing nearly an octave of notes on a connected device. Handy for things with no keyboard.
+Also, the drum pads allow playing nearly an octave of notes on a connected device. Handy for things with no keyboard. <br>
 81% prog memory used - other old skool drumkits are intended to be able to be used in a future update <br>
 
 Fritzing or similar schematic to be uploaded. <br>
