@@ -10,6 +10,7 @@ Pattern Copy
 Pattern Chain
 Tempo
 Swing (shuffle)
+Metronome
 MIDI
 Construction notes
 
@@ -61,8 +62,7 @@ Tempo
 -----
 Tempo can be changed by using the Tempo pot.
 The range is approximately 40 BPM to 300 BPM.
-Indication of the tempo is given by the LED, with flashes on pattern positions 1,9 and 11.
-Original intentions were to use a bright flash plus several lower intensity flashes, more in keeping with a traditional metronome, but PWM didn't appear to play well when running within the code. Was fine on its own and is something to return to, to fix.  
+Indication of the tempo is given by the LED, with flashes on pattern positions 1,9 and 11.  
 
 
 Tap Tempo
@@ -83,12 +83,27 @@ The code will be updated to Roger Linn's % method.
 For now, it allows useful timing variations and experimentation with pattern structures, creating a different feel to played patterns.   
 
 
+Metronome
+---------
+The metronome will sound at the beginning of new pattern entry.
+It can be switched off and on, by pressing the Run/Live mode button.
+Then, drum key 4 and Function at the same time to switch it on. 
+Or, drum key 5 and Function at the same time to switch it off.
+The tempo LED will go off for 1/2 second, signifying the change.
+N.B. Switching on and off will affect both patterns. 
+
+
 MIDI
 ----
-MIDI In and Out are implemented, but so far are proving difficult to get running.
+MIDI In and Out are implemented, but so far only MIDI Out is working.
 Jan Ostman's initial codebase for ESP-909 includes MIDI functionality and somewhere along development I may have borked it!
 This manual will be updated when it's fixed. It may work for you as it stands, my MIDI circuit is homemade from salvaged components. 
 MIDI commands in both directions will be Start/Stop, Pause and Note data. 
+At the moemnt, those commands work on pin D4 for MIDI Out.
+There is also the ability to change the PPQN, if a slave device uses a different amount than 24.
+Press drum key 6 and Function to step through various PPQN amounts. 
+
+
 
 
 
@@ -131,11 +146,11 @@ Here is a reference guide to those connections -
  D1 - S3
  D2 - S2
  D3 - Tempo LED
- D4 - 
+ D4 - MIDI Out
  D5 - S0
  D6 - S1
- D7 - RX MIDI
- D8 - TX MIDI
+ D7 - (RX MIDI)
+ D8 - (TX MIDI)
  A0 - Input from multiplexer
 
  16 channel Multiplexer
@@ -145,6 +160,7 @@ Here is a reference guide to those connections -
  port[13] Unused pot
  port[14] Record/Live button
  port[15] Tempo pot
+
 
 
 
