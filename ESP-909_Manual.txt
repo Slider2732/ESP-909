@@ -13,6 +13,7 @@ Swing (shuffle)
 Metronome
 MIDI
 Construction notes
+Practical Workflow
 
 
 
@@ -25,6 +26,8 @@ Press any drum button to hear each sound, practice patterns, add a live layer to
 When in this mode, the Function button on the right side end of the drum buttons becomes very powerful.
 Press button 1 (Bass Drum) along with Function to execute Pattern Copy.
 Press button 2 (Snare) along with Function to execute Pattern Chain.
+Press button 4 along with Function to switch on the metronome.
+Press button 5 along with Function to switch off the metronome.
 More features are intended to be added.
 When ready to record, press the Record/Live mode button.
 Tempo can be set with the relevant pot, BPM indication is with a flash of the LED on positions 1, 9 and 11 of the 16 part pattern.
@@ -163,4 +166,18 @@ Here is a reference guide to those connections -
 
 
 
-
+Practical Workflow
+------------------
+It may be dauntingn to use something like this project for the first time. Here is my own workflow, whch may be of help.
+Turn on the ESP-909.
+A sound will be heard (allowing a check of audio hardware).
+Then, if MIDI is connected, a short run of notes will be heard on the receiving device (allowing a check of the MIDI connection). 
+The ESP-909 is now in Live mode, where several functions are available. 
+I tend to press drum key 4 then Function at the same time to switch on the metronome. The LED turns off then back on to signify the change. 
+Press the Run/Live mode button and beats can be put in their correct places by following the metronome sound. The tempo can also be adjusted,at any time with the tempo pot. 
+Swap to pattern 2 by pressing the Function key and enter some drum sounds.  
+Press Run/Live again and then drum key 5 and Function, to turn off the metronome. 
+The rest of the parts of the pattern(s) are then added. 
+The pattern is recorded to a Zoom R8 8 track recorder, along with anything connected to MIDI.
+Fills and extra drums can be added on a separate track, or during mixdown to the Master track of the Zoom R8.
+Quick, logical and effective is the aim.   
