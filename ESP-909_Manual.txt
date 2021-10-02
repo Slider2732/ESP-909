@@ -89,12 +89,12 @@ For now, it allows useful timing variations and experimentation with pattern str
 
 Metronome
 ---------
-The metronome will sound at the beginning of new pattern entry.
-It can be switched off and on, by pressing the Run/Live mode button.
+The metronome can be switched off and on, by pressing the Run/Live mode button.
 Then, drum key 4 and Function at the same time to switch it on. 
 Or, drum key 5 and Function at the same time to switch it off.
 The tempo LED will go off for 1/2 second, signifying the change.
 N.B. Switching on and off will affect both patterns. 
+The metronome is off by default.
 
 
 MIDI
