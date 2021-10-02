@@ -28,8 +28,8 @@ When in this mode, the Function button on the right side end of the drum buttons
 Press button 1 (Bass Drum) along with Function to execute Pattern Copy.
 Press button 2 (Snare) along with Function to execute Pattern Chain.
 Press button 3 (Low Tom) along with Function to enter Tap Tempo mode.
-Press button 4 along with Function to switch on the metronome.
-Press button 5 along with Function to switch off the metronome.
+Press button 4 (Mid Tom) along with Function to switch on the metronome.
+Press button 5 (High Tom) along with Function to switch off the metronome.
 More features are intended to be added.
 When ready to record, press the Record/Live mode button.
 Tempo can be set with the relevant pot, BPM indication is with a flash of the LED on positions 1, 9 and 11 of the 16 part pattern.
