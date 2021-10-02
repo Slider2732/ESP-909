@@ -27,6 +27,7 @@ Press any drum button to hear each sound, practice patterns, add a live layer to
 When in this mode, the Function button on the right side end of the drum buttons becomes very powerful.
 Press button 1 (Bass Drum) along with Function to execute Pattern Copy.
 Press button 2 (Snare) along with Function to execute Pattern Chain.
+Press button 3 (Low Tom) along with Function to enter Tap Tempo mode.
 Press button 4 along with Function to switch on the metronome.
 Press button 5 along with Function to switch off the metronome.
 More features are intended to be added.
@@ -36,9 +37,9 @@ Tempo can also be set with the Tap Tempo feature detailed below.
 Each drum sound will be quantized to 1/16th of the pattern.
 If unhappy with a sound, press the same button again to remove it (easiest if the tempo is temporarily lowered).
 Variations in swing (shuffle) can be made by using the Swing pot.
-To swap to pattern 2, press the Function button. 
+To swap to pattern 2, press the Function button while pattern 1 is playing. 
 To return to Live mode, press the Record/Live mode button at any time. 
-To pause playback of a pattern, press the Pause/Play button. The pattern will stop at the end of its 16 note sequence and will restart the instant the button is released.
+To pause playback of a pattern at the pattern end beat, press the Pause/Play button. The pattern will stop at the end of its 16 note sequence and will restart the instant the button is released.
 To reset the drum machine, press the Reset button.
 
 
