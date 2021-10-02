@@ -14,6 +14,7 @@ Metronome
 MIDI
 Construction notes
 Practical Workflow
+Adding your own samples
 
 
 
@@ -181,3 +182,27 @@ The rest of the parts of the pattern(s) are then added.
 The pattern is recorded to a Zoom R8 8 track recorder, along with anything connected to MIDI.
 Fills and extra drums can be added on a separate track, or during mixdown to the Master track of the Zoom R8.
 Quick, logical and effective is the aim.   
+
+
+
+Adding your own samples
+-----------------------
+A source of many problems, because most examples found online will apply to 8 bit samples. 
+The project uses 16 bit, 44.1kHz samples.
+
+Here is how to manage your own sounds -
+Firstly, find samples that you would like to use, many places have free downloads of the classic machines. 
+If you have a modern Apple device, iTunes will apparently take care of sample conversion to C++.
+For windows users, there are programs such as Wav2c.
+
+For Linux Mint, this command works really well: od -s  --address-radix=none Kick.wav
+Where Kick.wav is the sample you would like to see. 
+When used in the Terminal, within the directory where samples are located, the line will show the wav file's contents.
+Copy and paste the output to a text editor.
+Delete the directory information and the first 44 bytes of data (wav's contain text information at the start).
+Replace the spaces,with a search and replace of spaces, to ',' commas. I find it best to tap 5 spaces in the search, press 'Replace All', delete a space and repeat.
+The file should now contain numbers such as 23187, -11859, 14453, 13673.
+Make a mental note of the file size in Words, most editors have the feature. 
+Copy the altered text file to the relevant drum sound in Drums.h and replace the bytes total before PROGMEM with the number shown as Words in the text editor.  
+Lastly, change the drum bytes total at the top of Drums.h, example - BD16LEN = 4987UL may become BD16LEN = 5489UL
+All done. The replaced drum is ready to be tried. 
