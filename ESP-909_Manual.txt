@@ -59,7 +59,7 @@ Press button 2 (Snare Drum) along with Function.
 Pattern 2 will be added to the end of pattern 1.
 The pattern length of the sequence will now be 32 beats. 
 The LED will remain off for a second while performing the chain and then a sound will be heard. The LED behaves in this way, to confirm to the player that he/she has pressed the correct button. 
-Returning to Record mode using the Record mode button will result in the full 32 steps being played.
+Returning to Record mode using the mode button will result in the full 32 steps being played.
 N.B. Pressing the Function button to swap to pattern 2 results in no action.  
 
 
@@ -67,7 +67,7 @@ Tempo
 -----
 Tempo can be changed by using the Tempo pot.
 The range is approximately 40 BPM to 300 BPM.
-Indication of the tempo is given by the LED, with flashes on pattern positions 1,9 and 11.  
+Indication of the tempo is given by the LED, with flashes on pattern positions 1, 9 and 11.  
 
 
 Tap Tempo
@@ -76,7 +76,7 @@ Tempo can also be changed by using the Tap Tempo feature.
 Change the mode to Live play mode, by pressing the mode button (attached to C14 of the multiplexer).
 The range of BPM is 40 BPM up to however fast you can tap the relevant key/button!
 Press key/button 3 and then the Function button.
-The timer will count to 10seconds, during which time you should tap to the beat required for the BPM.
+The timer will count to 10 seconds, during which time you should tap to the beat required for the BPM.
 The drum machine will then enter Play mode, where you will be able to see (and hear if beats are already present) the BPM.
 
 
@@ -90,9 +90,9 @@ For now, it allows useful timing variations and experimentation with pattern str
 
 Metronome
 ---------
-The metronome can be switched off and on, by pressing the Run/Live mode button.
-Then, drum key 4 and Function at the same time to switch it on. 
-Or, drum key 5 and Function at the same time to switch it off.
+The metronome can be switched off and on, by pressing the mode button.
+Then, press drum key 4 (Mid Tom) and Function at the same time to switch it on. 
+Or, drum key 5 (High Tom) and Function at the same time to switch it off.
 The tempo LED will go off for 1/2 second, signifying the change.
 N.B. Switching on and off will affect both patterns. 
 The metronome is off by default.
@@ -106,7 +106,8 @@ This manual will be updated when it's fixed. It may work for you as it stands, m
 MIDI commands in both directions will be Start/Stop, Pause and Note data. 
 At the moemnt, those commands work on pin D4 for MIDI Out.
 There is also the ability to change the PPQN, if a slave device uses a different amount than 24.
-Press drum key 6 and Function to step through various PPQN amounts. 
+Press drum key 6 (Rimshot) and Function to step through and test various PPQN amounts. 
+If the correct PPQN cannot be found, the code line to change is within the LivePlay() void. 
 
 
 
@@ -160,7 +161,7 @@ Here is a reference guide to those connections -
 
  16 channel Multiplexer
  ports 0 - 10 drum sounds buttons
- port[11] Pattern swap button
+ port[11] Function button
  port[12] Swing amount pot
  port[13] Unused pot
  port[14] Record/Live button
