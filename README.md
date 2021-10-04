@@ -22,7 +22,7 @@ Pattern Copy, from pattern 1 to pattern 2 <br>
 Pattern Chain, add pattern 2 to the end of pattern 1 <br>
 Beat delete, by pressing the same drum button at the same pattern location <br>
 Swing - crudimentarily implemented with a pot for now. Intention is to follow Roger Linn's % method <br>
-Play through - Play drum sounds over the top of a pattern, without recording them <br>
+Play through - play drum sounds over the top of a pattern, without recording them <br>
 Reset button (GND and RST) Surprisingly handy during a session <br>
 MIDI Out - Tempo/Start/Stop. Tested using Roland JU-06A and Roland TB-03 <br>
 MIDI PPQN change, for devices with different clock timings. <br> 
