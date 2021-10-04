@@ -24,7 +24,7 @@ Beat delete, by pressing the same drum button at the same pattern location <br>
 Swing - crudimentarily implemented with a pot for now. Intention is to follow Roger Linn's % method <br>
 Play through - play drum sounds over the top of a pattern, without recording them <br>
 Reset button (GND and RST) Surprisingly handy during a session <br>
-MIDI Out - Tempo/Start/Stop. Tested using Roland JU-06A and Roland TB-03 <br>
+MIDI Out - Tempo/Start/Stop/Note play. Tested using Roland JU-06A and Roland TB-03 <br>
 MIDI PPQN change, for devices with different clock timings. <br> 
 Also, the drum pads allow playing nearly an octave of notes on a connected device. Handy for things with no keyboard. <br>
 84% prog memory used - other old skool drumkits can be exchanged in Drums.h <br>
