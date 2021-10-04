@@ -6,6 +6,7 @@ Slider2732 - September 2021
 Contents
 --------
 Play It!
+Play Through
 Pattern Copy
 Pattern Chain
 Tempo
@@ -25,11 +26,12 @@ When the USB cable is connected to the ESP8266, the unit powers up into Live Pla
 Live Play mode is denoted by the LED being constantly lit. 
 Press any drum button to hear each sound, practice patterns, add a live layer to a pre-recorded track etc.
 When in this mode, the Function button on the right side end of the drum buttons becomes very powerful.
-Press button 1 (Bass Drum) along with Function to execute Pattern Copy.
-Press button 2 (Snare) along with Function to execute Pattern Chain.
-Press button 3 (Low Tom) along with Function to enter Tap Tempo mode.
-Press button 4 (Mid Tom) along with Function to switch on the metronome.
-Press button 5 (High Tom) along with Function to switch off the metronome.
+Press key 1 (Bass Drum) along with Function to execute Pattern Copy.
+Press key 2 (Snare) along with Function to execute Pattern Chain.
+Press key 3 (Low Tom) along with Function to enter Tap Tempo mode.
+Press key 4 (Mid Tom) along with Function to switch on the metronome.
+Press key 5 (High Tom) along with Function to switch off the metronome.
+Press key 10 (Ride) along with Function to enable Play Through ability.
 More features are intended to be added.
 When ready to record, press the Record/Live mode button.
 Tempo can be set with the relevant pot, BPM indication is with a flash of the LED on positions 1, 9 and 11 of the 16 part pattern.
@@ -43,24 +45,37 @@ To pause playback of a pattern at the pattern end beat, press the Pause/Play but
 To reset the drum machine, press the Reset button.
 
 
+Play Through
+------------
+A very useful and, some would say essential feature.
+Enter Live play mode, by pressing the Mode button (attached to C14 of the multiplexer). 
+Press key 11 (Ride) along with the Function key to enable or disable Play Through mode. Conveniently, both keys are next to each other on the end of the row of keys. Note - pressing any key and then the Function key along with it is a 100% effective method.
+The ESP-909 will immediately return to Play mode, denoted by the LED flashing to the tempo.
+Any drums previously recorded will play.
+You may now strike any key at any time, while the rhythm is playing and they will not be recorded.  
+
+
 Pattern Copy
 ------------
-Change the mode to Live play mode, by pressing the mode button (attached to C14 of the multiplexer).
-Press button 1 (Bass Drum) along with Function.
+Change the mode to Live play mode, by pressing the Mode button.
+Press key 1 (Bass Drum) along with Function.
 Pattern 1 will be copied to pattern 2.
-The LED will flash a sequence and a sound will be heard.
-Returning to Record mode using the Record mode button will result in both patterns sounding the same. Changes to patterns 1 or 2 can be made in the same regular way. Pattern copy allows for a variation on pattern 2, or, as a backup of pattern 1.  
+The LED will turn off for 1/2 a second.
+Returning to Record mode using the Mode button will result in both patterns sounding the same. Changes to patterns 1 or 2 can be made, as usual. 
+Pattern copy allows for a variation on pattern 2, as a backup of pattern 1, or to practice a pattern in real time while keeping pattern 1.
+Note - Pattern 1 will always be copied to pattern 2, to allow the above functionality.  
 
 
 Pattern Chain
 -------------
-Change the mode to Live play mode, by pressing the mode button (attached to C14 of the multiplexer).
-Press button 2 (Snare Drum) along with Function.
+Change the mode to Live play mode, by pressing the Mode button.
+Press key 2 (Snare Drum) along with Function.
 Pattern 2 will be added to the end of pattern 1.
 The pattern length of the sequence will now be 32 beats. 
-The LED will remain off for a second while performing the chain and then a sound will be heard. The LED behaves in this way, to confirm to the player that he/she has pressed the correct button. 
-Returning to Record mode using the mode button will result in the full 32 steps being played.
-N.B. Pressing the Function button to swap to pattern 2 results in no action.  
+The LED will switch off for 1/2 a second. 
+Return to Record mode using the Mode key.
+Pattern 2 will be heard after pattern 1 and loop around, the full 32 steps will play.
+N.B. Pressing the Function key to swap to pattern 2 results in no action.  
 
 
 Tempo
@@ -73,16 +88,16 @@ Indication of the tempo is given by the LED, with flashes on pattern positions 1
 Tap Tempo
 ---------
 Tempo can also be changed by using the Tap Tempo feature.
-Change the mode to Live play mode, by pressing the mode button (attached to C14 of the multiplexer).
-The range of BPM is 40 BPM up to however fast you can tap the relevant key/button!
-Press key/button 3 and then the Function button.
+Change the mode to Live play mode, by pressing the Mode key.
+The range of BPM is 40 BPM up to however fast you can tap the input key!
+Press key 3 and then the Function button.
 The timer will count to 10 seconds, during which time you should tap to the beat required for the BPM.
-The drum machine will then enter Play mode, where you will be able to see (and hear if beats are already present) the BPM.
+The drum machine will then enter Play mode, where you will be able to see the BPM via the LED.
 
 
 Swing
 -----
-Swing, or shuffle, at this early stage of development is a simple measurement of the swing pot position, divided down. 
+Swing, or shuffle, is at present a simple measurement of the swing pot position, divided down. 
 Each second beat is delayed by the swing amount, with the remaining beat time length shortened after the drum sound is fired. 
 The code will be updated to Roger Linn's % method.
 For now, it allows useful timing variations and experimentation with pattern structures, creating a different feel to played patterns.   
@@ -90,7 +105,7 @@ For now, it allows useful timing variations and experimentation with pattern str
 
 Metronome
 ---------
-The metronome can be switched off and on, by pressing the mode button.
+The metronome can be switched off and on, by pressing the Mode key.
 Then, press drum key 4 (Mid Tom) and Function at the same time to switch it on. 
 Or, drum key 5 (High Tom) and Function at the same time to switch it off.
 The tempo LED will go off for 1/2 second, signifying the change.
@@ -103,7 +118,7 @@ MIDI
 MIDI In and Out are implemented, but so far only MIDI Out is working.
 Jan Ostman's initial codebase for ESP-909 includes MIDI functionality and somewhere along development I may have borked it!
 This manual will be updated when it's fixed. It may work for you as it stands, my MIDI circuit is homemade from salvaged components. 
-MIDI commands in both directions will be Start/Stop, Pause and Note data. 
+MIDI commands in both directions will be Start, Stop, Pause and Note data. 
 At the moemnt, those commands work on pin D4 for MIDI Out.
 There is also the ability to change the PPQN, if a slave device uses a different amount than 24.
 Press drum key 6 (Rimshot) and Function to step through and test various PPQN amounts. 
