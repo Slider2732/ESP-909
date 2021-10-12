@@ -6,7 +6,7 @@ https://web.archive.org/web/20190917184506/http://blog.dspsynth.eu/audio-hacking
 
 
 The project uses a Wemos D1 Mini (ESP8266) and a 16 port 4067 multiplexer. <br>
-Thanks to Jack Wildchurch for the usability emphasis!
+Thanks to Jack Wildchurch for the usability emphasis and code testing!
 
 Currently - <br>
 All 11 TR-909 sounds at 44.1kHz <br>
@@ -14,7 +14,6 @@ All 11 TR-909 sounds at 44.1kHz <br>
 16th's pattern length <br>
 Live mode and Record mode  <br>
 LED BPM and Live mode indicator <br>
-Play/Pause button <br>
 Tap tempo <br>
 Metronome, with on and off <br>
 Pattern Change, on the fly <br>
