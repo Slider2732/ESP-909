@@ -22,8 +22,8 @@ Adding your own samples
 
 Play It!
 --------
-When the USB cable is connected to the ESP8266, the unit powers up into Live Play mode.
-Live Play mode is denoted by the LED being constantly lit. 
+When the USB cable is connected to the ESP8266, the unit powers up into Live mode.
+Live mode is denoted by the LED being constantly lit. 
 Press any drum button to hear each sound, practice patterns, add a live layer to a pre-recorded track etc.
 When in this mode, the Function button on the right side end of the drum buttons becomes very powerful.
 Press key 1 (Bass Drum) along with Function to execute Pattern Copy.
@@ -41,41 +41,42 @@ If unhappy with a sound, press the same button again to remove it (easiest if th
 Variations in swing (shuffle) can be made by using the Swing pot.
 To swap to pattern 2, press the Function button while pattern 1 is playing. 
 To return to Live mode, press the Record/Live mode button at any time. 
-To pause playback of a pattern at the pattern end beat, press the Pause/Play button. The pattern will stop at the end of its 16 note sequence and will restart the instant the button is released.
 To reset the drum machine, press the Reset button.
 
 
 Play Through
 ------------
 A very useful and, some would say essential feature.
-Enter Live play mode, by pressing the Mode button (attached to C14 of the multiplexer). 
-Press key 11 (Ride) along with the Function key to enable or disable Play Through mode. Conveniently, both keys are next to each other on the end of the row of keys. Note - pressing any key and then the Function key along with it is a 100% effective method.
+Enter Live mode, by pressing the Mode button (attached to C14 of the multiplexer). 
+Press key 11 (Ride) along with the Function key to enable or disable Play Through mode. Conveniently, both keys are next to each other on the end of the row of keys. Note - pressing a key first and then the Function key along with it is a 100% effective method.
 The ESP-909 will immediately return to Play mode, denoted by the LED flashing to the tempo.
 Any drums previously recorded will play.
 You may now strike any key at any time, while the rhythm is playing and they will not be recorded.  
+Switch off Play Through, by repeating the steps above. 
 
 
 Pattern Copy
 ------------
-Change the mode to Live play mode, by pressing the Mode button.
+Change to Live mode, by pressing the Mode button.
 Press key 1 (Bass Drum) along with Function.
 Pattern 1 will be copied to pattern 2.
 The LED will turn off for 1/2 a second.
-Returning to Record mode using the Mode button will result in both patterns sounding the same. Changes to patterns 1 or 2 can be made, as usual. 
+Return to Record mode, by pressing the Mode key.
+Both patterns will sound the same. Changes to patterns 1 or 2 can be made, as usual. 
 Pattern copy allows for a variation on pattern 2, as a backup of pattern 1, or to practice a pattern in real time while keeping pattern 1.
-Note - Pattern 1 will always be copied to pattern 2, to allow the above functionality.  
+Note - Pattern 1 will always be copied to pattern 2, to allow the above functionality. Also, playback will begin with pattern 1, allowing you to know which pattern is which.  
 
 
 Pattern Chain
 -------------
-Change the mode to Live play mode, by pressing the Mode button.
+Change to Live mode, by pressing the Mode button.
 Press key 2 (Snare Drum) along with Function.
 Pattern 2 will be added to the end of pattern 1.
 The pattern length of the sequence will now be 32 beats. 
 The LED will switch off for 1/2 a second. 
 Return to Record mode using the Mode key.
-Pattern 2 will be heard after pattern 1 and loop around, the full 32 steps will play.
-N.B. Pressing the Function key to swap to pattern 2 results in no action.  
+Pattern 2 will be heard after pattern 1, the full 32 steps will play.
+Note - Pressing the Function key to swap to pattern 2 results in no action.  
 
 
 Tempo
@@ -88,11 +89,11 @@ Indication of the tempo is given by the LED, with flashes on pattern positions 1
 Tap Tempo
 ---------
 Tempo can also be changed by using the Tap Tempo feature.
-Change the mode to Live play mode, by pressing the Mode key.
+Change to Live mode, by pressing the Mode key.
 The range of BPM is 40 BPM up to however fast you can tap the input key!
 Press key 3 and then the Function button.
 The timer will count to 10 seconds, during which time you should tap to the beat required for the BPM.
-The drum machine will then enter Play mode, where you will be able to see the BPM via the LED.
+The drum machine will then enter Play mode, where you will be able to see the BPM speed via the LED.
 
 
 Swing
@@ -105,11 +106,15 @@ For now, it allows useful timing variations and experimentation with pattern str
 
 Metronome
 ---------
-The metronome can be switched off and on, by pressing the Mode key.
-Then, press drum key 4 (Mid Tom) and Function at the same time to switch it on. 
+The metronome is attached to D0 of the Wemos microcontroller.
+When the attached key is pressed, the metronome changes state, on or off.
+The metronome key can be pressed at any time while in Play mode. The pattern being played will reset to position 1 and the metronome will either be heard or silent. 
+ 
+The metronome can also be switched off and on while within Live mode.
+Press drum key 4 (Mid Tom) and Function at the same time to switch it on. 
 Or, drum key 5 (High Tom) and Function at the same time to switch it off.
 The tempo LED will go off for 1/2 second, signifying the change.
-N.B. Switching on and off will affect both patterns. 
+Note - Switching on and off will affect both patterns. 
 The metronome is off by default.
 
 
@@ -121,7 +126,7 @@ This manual will be updated when it's fixed. It may work for you as it stands, m
 MIDI commands in both directions will be Start, Stop, Pause and Note data. 
 At the moemnt, those commands work on pin D4 for MIDI Out.
 There is also the ability to change the PPQN, if a slave device uses a different amount than 24.
-Press drum key 6 (Rimshot) and Function to step through and test various PPQN amounts. 
+Press drum key 6 (Rimshot) and Function to step through and test various PPQN amounts in Live mode. 
 If the correct PPQN cannot be found, the code line to change is within the LivePlay() void. 
 
 
@@ -137,21 +142,27 @@ Components required -
 Wemos D1 Mini (ESP8266)
 HC4067 16 port multiplexer
 15 momentary action buttons
-2x 5K pot
+2x 10K pot (a third may be used for volume)
 MIDI circuit (Sparkfun/Adafruit etc, or homemade)
 100uF 16V capacitor
-1nF (103) ceramic capacitor
+47nF (473) ceramic capacitor
 1x LED, with 100 ohm resistor to protect it
 2 pin connector 
 Large perfboard (12cm x 18cm)
 
+Alternatively, all connections can be run to a cartridge type system.
+The Wemos microcontroller pins connect to 16 pins on the edge of a perfbooard piece. 
+Doing so, allows the swapping in and out of different drum machine sounds. Each drum machine being contained on a Wemos microcontroller.  
+Sound banks being constructed are for Roland TR-909, TR-808, TR-707, CR-78 and Oberheim DMX. Sound banks will be available on the same Github repository. 
+
 The layout is up to you, here is how the prototype circuit is arranged -
-Top left is the Wemos D1 Mini, underneath the board. 
-Output audio is from the RX pin, the audio filter consisting of 100uF electrolytic cap and 1nf ceramic cap are connected to it. A 2 pin header connector is a simple way to enable or disable the RX pin for code uploads. 
-Top middle is the MIDI circuit. 
+Top left is the Wemos D1 Mini, connected as a TR-909 cartridge. 
+Output audio is at the rear, from the RX pin. A 2 pin header connector is a simple way to enable or disable the RX pin for code uploads. 
+Bottom left is the MIDI circuit. 
 Top right is the Reset button, connected to GND and RST on the Wemos D1 Mini.
-Middle left are the Tempo pot (5K), LED, Swing pot (5K) and an unused pot, perhaps for reverb or pitch later in development.  
-Middle right are the Record/Live mode button and Play/Pause button.
+Top left is the LED.
+Middle are the Tempo pot (10K), Swing pot (10K) and volume pot (10K).  
+Middle right are the Metronome and Record/Live mode buttons.
 Bottom row is for the drum sounds, 1 button per sound, matching the placement of the TR-909 drum sounds. 
 Bottom row right, is the Function button.
 Due to the multiplexer having capacitance properties, you may find that low hight buttons will trigger another sound as well. The fix, is to use taller buttons, increase spacings, or, use PC key switches and caps. The prototype build was found to suffer from the issue, buttons being replaced by ALPS key switches from a late 1980's busted laptop. 
@@ -163,7 +174,7 @@ The code has been commented with hopefully useful information.
 Here is a reference guide to those connections - 
 
  Wemos D1 Mini pins:
- D0 - Play/Pause
+ D0 - Metronome
  D1 - S3
  D2 - S2
  D3 - Tempo LED
@@ -178,7 +189,7 @@ Here is a reference guide to those connections -
  ports 0 - 10 drum sounds buttons
  port[11] Function button
  port[12] Swing amount pot
- port[13] Unused pot
+ port[13] Unused pot, used instead as volume
  port[14] Record/Live button
  port[15] Tempo pot
 
@@ -186,18 +197,18 @@ Here is a reference guide to those connections -
 
 Practical Workflow
 ------------------
-It may be dauntingn to use something like this project for the first time. Here is my own workflow, whch may be of help.
+It may be daunting to use something like this project for the first time. Here is my own workflow, whch may be of help.
 Turn on the ESP-909.
 A sound will be heard (allowing a check of audio hardware).
 Then, if MIDI is connected, a short run of notes will be heard on the receiving device (allowing a check of the MIDI connection). 
 The ESP-909 is now in Live mode, where several functions are available. 
 I tend to press drum key 4 then Function at the same time to switch on the metronome. The LED turns off then back on to signify the change. 
-Press the Run/Live mode button and beats can be put in their correct places by following the metronome sound. The tempo can also be adjusted,at any time with the tempo pot. 
+Press the Run/Live mode button and beats can be put in their correct places by following the metronome sound. The tempo can also be adjusted at any time with the tempo pot. 
 Swap to pattern 2 by pressing the Function key and enter some drum sounds.  
-Press Run/Live again and then drum key 5 and Function, to turn off the metronome. 
+Press the Metronome key, or Run/Live and then drum key 5 and Function, to turn off the metronome.
 The rest of the parts of the pattern(s) are then added. 
 The pattern is recorded to a Zoom R8 8 track recorder, along with anything connected to MIDI.
-Fills and extra drums can be added on a separate track, or during mixdown to the Master track of the Zoom R8.
+Fills and extra drums can be added by setting Play Through mode to on.
 Quick, logical and effective is the aim.   
 
 
@@ -217,9 +228,9 @@ Where Kick.wav is the sample you would like to see.
 When used in the Terminal, within the directory where samples are located, the line will show the wav file's contents.
 Copy and paste the output to a text editor.
 Delete the directory information and the first 44 bytes of data (wav's contain text information at the start).
-Replace the spaces,with a search and replace of spaces, to ',' commas. I find it best to tap 5 spaces in the search, press 'Replace All', delete a space and repeat.
+Replace the spaces between numbers, with a search and replace of spaces, to ',' commas. I find it best to tap 5 spaces in the search, press 'Replace All', delete a space and repeat. Finally in the text editor, search for ",," and replace with ","
 The file should now contain numbers such as 23187, -11859, 14453, 13673.
 Make a mental note of the file size in Words, most editors have the feature. 
 Copy the altered text file to the relevant drum sound in Drums.h and replace the bytes total before PROGMEM with the number shown as Words in the text editor.  
 Lastly, change the drum bytes total at the top of Drums.h, example - BD16LEN = 4987UL may become BD16LEN = 5489UL
-All done. The replaced drum is ready to be tried. 
+All done. The replaced drum is ready to be played. 
