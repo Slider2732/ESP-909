@@ -35,6 +35,6 @@ Demo short track - FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straig
 
 <br><br><br>
 
-<img src ="./IMG_3746.JPG" raw=true />
+<img src ="./IMG_3775s.JPG" raw=true />
 
 
