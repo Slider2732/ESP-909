@@ -32,8 +32,9 @@ Also, the drum pads allow playing nearly an octave of notes on a connected devic
 Fritzing or similar schematic to be uploaded. <br>
 A quick guide Manual has been uploaded (to be converted to PDF). <br>
 Code is commented. <br>
-Demo short track - FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work. In the track it's controlling a sequence on a Roland JU-06A. Recorded live to a Zoom R8 with no EQ. Synth line - Korg X5DR  :)
+Demo's- <br>
+FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work. <br>
+Simulation.mp3 salutes William Shatner's trip into space aboard the Blue Origin spaceship. It uses a TR-808 sample set. <br>
 
-<br>
 
 <img src ="./IMG_3775s.JPG" raw=true />
