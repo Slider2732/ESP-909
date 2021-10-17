@@ -12,6 +12,7 @@ Pattern Chain
 Tempo
 Swing (shuffle)
 Metronome
+Pitch Shifting
 MIDI
 Construction notes
 Practical Workflow
@@ -116,6 +117,16 @@ Or, drum key 5 (High Tom) and Function at the same time to switch it off.
 The tempo LED will go off for 1/2 second, signifying the change.
 Note - Switching on and off will affect both patterns. 
 The metronome is off by default.
+
+
+Pitch Shifting
+--------------
+Pitch changing of the whole drum kit is available on pin 12 of the multiplexer.
+A 10K pot attached to the pin enables a speed shift, anywhere from 25kHz to 55kHz.
+When used, the samples change their pitch, the tempo is unaffected.
+The pot can be moved to any value while a pattern is playing.
+The new speed is implemented at each pattern loop start.
+A central dead zone is implemented of 44.1kHz, allowing a quick and easy return to the correct playing speed of the samples. 
 
 
 MIDI
