@@ -16,6 +16,7 @@ Live mode and Record mode  <br>
 LED BPM and Live mode indicator <br>
 Tap tempo <br>
 Metronome, with on and off <br>
+Pitch shifting, on the fly <br>
 Pattern Change, on the fly <br>
 Pattern Copy, from pattern 1 to pattern 2 <br>
 Pattern Chain, add pattern 2 to the end of pattern 1 <br>
