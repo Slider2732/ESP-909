@@ -5,7 +5,7 @@ https://web.archive.org/web/20190917184506/http://blog.dspsynth.eu/audio-hacking
 
 
 
-The project uses a Wemos D1 Mini (ESP8266) and a 16 port 4067 multiplexer. <br>
+The project uses a Wemos D1 Mini (ESP8266), a 16 port 4067 multiplexer and the option to use a MAX98357A DAC. <br>
 Thanks to Jack Wildchurch for the usability emphasis and code testing!
 
 Currently - <br>
@@ -27,7 +27,7 @@ Reset button (GND and RST) Surprisingly handy during a session <br>
 MIDI Out - Tempo/Start/Stop/Note play. Tested using Roland JU-06A and Roland TB-03 <br>
 MIDI PPQN change, for devices with different clock timings. <br> 
 Also, the drum pads allow playing nearly an octave of notes on a connected device. Handy for things with no keyboard. <br>
-84% prog memory used - other old skool drumkits can be exchanged in Drums.h <br>
+88% prog memory used - other old skool drumkits can be exchanged in Drums.h <br>
 
 Fritzing or similar schematic to be uploaded. <br>
 A quick guide Manual has been uploaded (to be converted to PDF). <br>
