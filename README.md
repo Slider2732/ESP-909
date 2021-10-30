@@ -37,4 +37,4 @@ FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MI
 Simulation.mp3 salutes William Shatner's trip into space aboard the Blue Origin spaceship. It uses a TR-808 sample set. <br>
 
 
-<img src ="./IMG_3775s.JPG" raw=true />
+<img src ="./ESP-909_s.JPG" raw=true />
