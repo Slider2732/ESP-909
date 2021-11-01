@@ -6,7 +6,7 @@ https://web.archive.org/web/20190917184506/http://blog.dspsynth.eu/audio-hacking
 
 
 The project uses a Wemos D1 Mini (ESP8266) and a 16 port 4067 multiplexer <br>
-Optionally, a MAX98357A DAC will output crisp clean audio, but will also need an Arduino for handling MIDI messages. <br>
+Optionally, a MAX98357A DAC will output crisp clean audio, but also needs an Arduino for handling MIDI messages. <br>
 Thanks to Jack Wildchurch for the usability emphasis and code testing!
 
 Currently - <br>
@@ -35,7 +35,8 @@ A quick guide Manual has been uploaded (to be converted to PDF). <br>
 Code is commented. <br>
 Demo's- <br>
 FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work. <br>
-Simulation.mp3 salutes William Shatner's trip into space aboard the Blue Origin spaceship. It uses a TR-808 sample set. <br>
+Simulation.mp3 salutes William Shatner's trip into space aboard the Blue Origin spaceship. It uses a TR-808 sample set and no DAC.<br>
+A DAC enabled MIDI example is to be uploaded (as of Nov 1st 2021) <br>
 
 
 <img src ="./ESP-909_s.JPG" raw=true />
