@@ -1,6 +1,6 @@
-Draft Manual for ESP-909
+Draft Manual for ESP-909 Evolution
 Simple operating guide 
-Slider2732 - September 2021
+Slider2732 - November 2021
 
 
 Contents
@@ -23,15 +23,15 @@ Adding your own samples
 
 Play It!
 --------
-When the USB cable is connected to the ESP8266, the unit powers up into Live mode.
+When the USB cable is connected to the build, the unit powers up into Live mode.
 Live mode is denoted by the LED being constantly lit. 
 Press any drum button to hear each sound, practice patterns, add a live layer to a pre-recorded track etc.
 When in this mode, the Function button on the right side end of the drum buttons becomes very powerful.
 Press key 1 (Bass Drum) along with Function to execute Pattern Copy.
 Press key 2 (Snare) along with Function to execute Pattern Chain.
 Press key 3 (Low Tom) along with Function to enter Tap Tempo mode.
-Press key 4 (Mid Tom) along with Function to switch on the metronome.
-Press key 5 (High Tom) along with Function to switch off the metronome.
+Press key 4 (Mid Tom) along with Function to lower Swing amount.
+Press key 5 (High Tom) along with Function to increase Swing amount.
 Press key 10 (Ride) along with Function to enable Play Through ability.
 More features are intended to be added.
 When ready to record, press the Record/Live mode button.
@@ -39,7 +39,6 @@ Tempo can be set with the relevant pot, BPM indication is with a flash of the LE
 Tempo can also be set with the Tap Tempo feature detailed below.
 Each drum sound will be quantized to 1/16th of the pattern.
 If unhappy with a sound, press the same button again to remove it (easiest if the tempo is temporarily lowered).
-Variations in swing (shuffle) can be made by using the Swing pot.
 To swap to pattern 2, press the Function button while pattern 1 is playing. 
 To return to Live mode, press the Record/Live mode button at any time. 
 To reset the drum machine, press the Reset button.
@@ -83,7 +82,7 @@ Note - Pressing the Function key to swap to pattern 2 results in no action.
 Tempo
 -----
 Tempo can be changed by using the Tempo pot.
-The range is approximately 40 BPM to 300 BPM.
+The range is approximately 40 BPM to 200 BPM.
 Indication of the tempo is given by the LED, with flashes on pattern positions 1, 9 and 11.  
 
 
@@ -99,22 +98,20 @@ The drum machine will then enter Play mode, where you will be able to see the BP
 
 Swing
 -----
-Swing, or shuffle, is at present a simple measurement of the swing pot position, divided down. 
+Swing, or shuffle, is at present a simple decrease or increase on every other beat of the 16 pattern positions.
 Each second beat is delayed by the swing amount, with the remaining beat time length shortened after the drum sound is fired. 
-The code will be updated to Roger Linn's % method.
-For now, it allows useful timing variations and experimentation with pattern structures, creating a different feel to played patterns.   
+The code will be updated to Roger Linn's % method in a future update.
+For now, it allows useful timing variations and experimentation with pattern structures, creating a different feel to played patterns. 
+Swing can be switched between 8 levels while within Live mode.
+Press drum key 4 (Mid Tom) and Function at the same time to decrease the amount. 
+Or, drum key 5 (High Tom) and Function at the same time to increase the amount.  
 
 
 Metronome
 ---------
-The metronome is attached to D0 of the Wemos microcontroller.
+The metronome is attached to port 13 of the Wemos microcontroller.
 When the attached key is pressed, the metronome changes state, on or off.
 The metronome key can be pressed at any time while in Play mode. The pattern being played will reset to position 1 and the metronome will either be heard or silent. 
- 
-The metronome can also be switched off and on while within Live mode.
-Press drum key 4 (Mid Tom) and Function at the same time to switch it on. 
-Or, drum key 5 (High Tom) and Function at the same time to switch it off.
-The tempo LED will go off for 1/2 second, signifying the change.
 Note - Switching on and off will affect both patterns. 
 The metronome is off by default.
 
@@ -131,14 +128,15 @@ A central dead zone is implemented of 44.1kHz, allowing a quick and easy return 
 
 MIDI
 ----
-MIDI In and Out are implemented, but so far only MIDI Out is working.
-Jan Ostman's initial codebase for ESP-909 includes MIDI functionality and somewhere along development I may have borked it!
-This manual will be updated when it's fixed. It may work for you as it stands, my MIDI circuit is homemade from salvaged components. 
+MIDI In and Out are implemented, but so far only MIDI Out is working on both non DAC and DAC versions.
+This manual will be updated when it's fixed. 
 MIDI commands in both directions will be Start, Stop, Pause and Note data. 
 At the moemnt, those commands work on pin D4 for MIDI Out.
-There is also the ability to change the PPQN, if a slave device uses a different amount than 24.
+MIDI Start, Clock and Stop work with the Fake MIDI sketch and extra Arduino connected.
+There is an ability to change the PPQN, if a slave device uses a different amount than 24.
 Press drum key 6 (Rimshot) and Function to step through and test various PPQN amounts in Live mode. 
 If the correct PPQN cannot be found, the code line to change is within the LivePlay() void. 
+MIDI has been tested with a Roland TB-03 and Roland JU06A.
 
 
 
@@ -152,6 +150,8 @@ With reference to the prototype build picture on Github.
 Components required -
 Wemos D1 Mini (ESP8266)
 HC4067 16 port multiplexer
+Optional MAX98357A DAC
+Optional Arduino to handle DAC optioned MIDI messages
 15 momentary action buttons
 2x 10K pot (a third may be used for volume)
 MIDI circuit (Sparkfun/Adafruit etc, or homemade)
@@ -161,22 +161,28 @@ MIDI circuit (Sparkfun/Adafruit etc, or homemade)
 2 pin connector 
 Large perfboard (12cm x 18cm)
 
-Alternatively, all connections can be run to a cartridge type system.
-The Wemos microcontroller pins connect to 16 pins on the edge of a perfbooard piece. 
+A note about building with or without a DAC -
+Using no DAC will output sound on the RX pin of the Wemos. The advantages include a simpler build and direct MIDI Out abilities, using pin D4 of the Wemos. Disadvantages are that the sound is far inferior, with noise evident on the decay portions of sounds.
+Using a DAC brings a clean and solid output to an ESP-909 build. A disadvantage, is that no Serial method seems to work, due to the DAC taking over a pin of each Serial port. The solution, is to use what I've termed Fake MIDI, using any Arduino compatible microprocessor. Anything will work, from an ATTINY, to bare ATMEL328P, to Arduino Nano. The testing setup here uses an Arduino Nano.
+Connections to the Arduino are +5V, Gnd, Wemos pin D5 to Arduino pin 2, Wemos pin D6 to pin 3. Arduino TX goes to your MIDI shields Send pin. An LED output is provided on Arduino Nano pin 10, to display when MIDI data is being sent or not. All pins can be set at the top of the ESP-909FakeMIDI.ino sketch.     
+
+All Wemos connections can be run to a cartridge type system.
+The Wemos ESP8266 pins connect to 16 pins on the edge of a perfbooard piece. 
 Doing so, allows the swapping in and out of different drum machine sounds. Each drum machine being contained on a Wemos microcontroller.  
-Sound banks being constructed are for Roland TR-909, TR-808, TR-707, CR-78 and Oberheim DMX. Sound banks will be available on the same Github repository. 
+Sound banks currently being constructed are for Roland TR-909, TR-808, TR-707, CR-78, Oberheim DMX and Linn LM-1. Sound banks will be available on the same Github repository. You can also create or mix and match your own. 
 
 The layout is up to you, here is how the prototype circuit is arranged -
 Top left is the Wemos D1 Mini, connected as a TR-909 cartridge. 
-Output audio is at the rear, from the RX pin. A 2 pin header connector is a simple way to enable or disable the RX pin for code uploads. 
+Output audio is at the rear, from the DAC or RX pin. A 2 pin header connector is a simple way to enable or disable the RX pin for code uploads. 
 Bottom left is the MIDI circuit. 
 Top right is the Reset button, connected to GND and RST on the Wemos D1 Mini.
-Top left is the LED.
+Top left is the status LED and On/Off switch.
 Middle are the Tempo pot (10K), Swing pot (10K) and volume pot (10K).  
 Middle right are the Metronome and Record/Live mode buttons.
+A low pass filter circuit is on a pot in this area.
 Bottom row is for the drum sounds, 1 button per sound, matching the placement of the TR-909 drum sounds. 
 Bottom row right, is the Function button.
-Due to the multiplexer having capacitance properties, you may find that low hight buttons will trigger another sound as well. The fix, is to use taller buttons, increase spacings, or, use PC key switches and caps. The prototype build was found to suffer from the issue, buttons being replaced by ALPS key switches from a late 1980's busted laptop. 
+Due to the multiplexer having capacitance properties, you may find that low height buttons will trigger another sound as well. The fix, is to use taller buttons, increase spacings, or, use PC key switches and caps. The prototype build was found to suffer from the issue, buttons being replaced by ALPS key switches from a late 1980's busted laptop. 
 
 
 A look through the code will determine the correct connections. 
@@ -185,24 +191,34 @@ The code has been commented with hopefully useful information.
 Here is a reference guide to those connections - 
 
  Wemos D1 Mini pins:
- D0 - Metronome
- D1 - S3
- D2 - S2
- D3 - Tempo LED
- D4 - MIDI Out
- D5 - S0
- D6 - S1
- D7 - (RX MIDI)
- D8 - (TX MIDI)
+ D0 - S0
+ D1 - S1     
+ D2 - S2      
+ D3 - S3
+ D4 - MIDI Out without DAC, or LRC of DAC
+ D5 - Fake MIDI Out for Start/Clock/Stop
+ D6 - Fake MIDI In
+ D7 - Tempo LED
+ D8 - BCLK of DAC
  A0 - Input from multiplexer
+ RX - Audio output without DAC, or DIN of DAC
+ TX -
 
  16 channel Multiplexer
- ports 0 - 10 drum sounds buttons
- port[11] Function button
- port[12] Swing amount pot
- port[13] Unused pot, used instead as volume
- port[14] Record/Live button
+ port[0] to [10] drum sounds
+ port[11] Alternative pattern / Function key
+ port[12] Pitch Pot
+ port[13] Metronome On/Off
+ port[14] Record / Live play key
  port[15] Tempo pot
+ Wire multiplexer - EN to GND, SIG to A0, VCC to 3v3 and GND to GND
+
+ Arduino pins (Arduino Nano)
+ +5V
+ Gnd
+ D2 from Wemos D5
+ D3 to Wemos D6
+ TX to MIDI shield Send pin
 
 
 
@@ -213,13 +229,13 @@ Turn on the ESP-909.
 A sound will be heard (allowing a check of audio hardware).
 Then, if MIDI is connected, a short run of notes will be heard on the receiving device (allowing a check of the MIDI connection). 
 The ESP-909 is now in Live mode, where several functions are available. 
-I tend to press drum key 4 then Function at the same time to switch on the metronome. The LED turns off then back on to signify the change. 
-Press the Run/Live mode button and beats can be put in their correct places by following the metronome sound. The tempo can also be adjusted at any time with the tempo pot. 
-Swap to pattern 2 by pressing the Function key and enter some drum sounds.  
-Press the Metronome key, or Run/Live and then drum key 5 and Function, to turn off the metronome.
-The rest of the parts of the pattern(s) are then added. 
+I tend to test drum volume levels by pressing several drum keys, then press the mode key and switch on the metronome. 
+Beats can be put in their correct places by following the metronome sound. The tempo can also be adjusted at any time with the tempo pot. 
+Swap to pattern 2 by pressing the Function key and enter some more drum sounds.  
+Press the metronome key when no longer needed.
+The rest of the parts of the pattern(s) are then added.
+Pressing drum key 11 and Function allows play through, for fills and extras during pattern playback.   
 The pattern is recorded to a Zoom R8 8 track recorder, along with anything connected to MIDI.
-Fills and extra drums can be added by setting Play Through mode to on.
 Quick, logical and effective is the aim.   
 
 
