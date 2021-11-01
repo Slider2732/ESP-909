@@ -30,6 +30,9 @@ MIDI PPQN change, for devices with different clock timings. <br>
 Also, the drum pads allow playing nearly an octave of notes on a connected device. Handy for things with no keyboard. <br>
 88% prog memory used - other old skool drumkits can be exchanged in Drums.h <br>
 
+Freshly uploaded - DrumMachines.zip <br>
+It contains replacement Drums.h files for TR-909, TR-808, TR-707, DMX and CR-78 <br>
+
 Fritzing or similar schematic to be uploaded. <br>
 A quick guide Manual has been uploaded (to be converted to PDF). <br>
 Code is commented, with full connections listed. <br>
