@@ -5,7 +5,8 @@ https://web.archive.org/web/20190917184506/http://blog.dspsynth.eu/audio-hacking
 
 
 
-The project uses a Wemos D1 Mini (ESP8266), a 16 port 4067 multiplexer and the option to use a MAX98357A DAC. <br>
+The project uses a Wemos D1 Mini (ESP8266) and a 16 port 4067 multiplexer <br>
+Optionally, a MAX98357A DAC will output crisp clean audio, but will also need an Arduino for handling MIDI messages. <br>
 Thanks to Jack Wildchurch for the usability emphasis and code testing!
 
 Currently - <br>
@@ -21,7 +22,7 @@ Pattern Change, on the fly <br>
 Pattern Copy, from pattern 1 to pattern 2 <br>
 Pattern Chain, add pattern 2 to the end of pattern 1 <br>
 Beat delete, by pressing the same drum button at the same pattern location <br>
-Swing - crudimentarily implemented with a pot for now. Intention is to follow Roger Linn's % method <br>
+Swing - crudimentarily implemented. Intention is to follow Roger Linn's % method <br>
 Play through - play drum sounds over the top of a pattern, without recording them <br>
 Reset button (GND and RST) Surprisingly handy during a session <br>
 MIDI Out - Tempo/Start/Stop/Note play. Tested using Roland JU-06A and Roland TB-03 <br>
