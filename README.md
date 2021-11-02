@@ -5,7 +5,7 @@ https://web.archive.org/web/20190917184506/http://blog.dspsynth.eu/audio-hacking
 <br>
 
 Download ESP-909.zip for the code <br>
-Download Drum Machines.zip for various alternative drum machines sample sets <br>
+Download Drum Machines.zip for various alternative sample sets <br>
 <br>
 <br>
 
@@ -38,7 +38,7 @@ Freshly uploaded - Drum Machines.zip <br>
 It contains replacement Drums.h files for TR-909, TR-808, TR-707, DMX and CR-78 <br>
 
 Fritzing or similar schematic to be uploaded. <br>
-A quick guide Manual has been uploaded (to be converted to PDF). <br>
+A quick guide Manual has been uploaded (to be converted to PDF) <br>
 Code is commented, with full connections listed. <br>
 Demo's- <br>
 FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work. <br>
