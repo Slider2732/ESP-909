@@ -39,7 +39,7 @@ Code is commented, with full connections listed. <br>
 Demo's- <br>
 FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work. <br>
 Simulation.mp3 salutes William Shatner's trip into space aboard the Blue Origin spaceship. It uses a TR-808 sample set and no DAC.<br>
-A DAC enabled MIDI example is to be uploaded (as of Nov 1st 2021) <br>
+DAC-MIDI is the first run of the Fake MIDI code working. The code has since been tightened and the 909 claps are higher in volume <br>
 
 
 <img src ="./ESP-909_s.JPG" raw=true />
