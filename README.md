@@ -1,9 +1,13 @@
 # ESP-909 Evolution
 Building upon Jan Ostman's Arduino IDE drum machine codebase for the ESP8266. <br>
 Archive.org link:<br>
-https://web.archive.org/web/20190917184506/http://blog.dspsynth.eu/audio-hacking-on-the-esp8266/
+https://web.archive.org/web/20190917184506/http://blog.dspsynth.eu/audio-hacking-on-the-esp8266/ <br>
+<br>
 
-
+Download ESP-909.zip for the code <br>
+Download Drum Machines.zip for various alternative drum machines sample sets <br>
+<br>
+<br>
 
 The project uses a Wemos D1 Mini (ESP8266) and a 16 port 4067 multiplexer <br>
 Optionally, a MAX98357A DAC will output crisp clean audio, but also needs an Arduino for handling MIDI messages. <br>
