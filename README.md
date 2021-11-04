@@ -12,7 +12,7 @@ Wemos D1 Mini (ESP8266) <br>
 16 port 4067 multiplexer <br>
 MAX98357A DAC <br>
 Any Arduino (for handling MIDI messages) <br>
-Thanks to Jack Wildchurch for the usability emphasis and code testing!
+
 
 Currently - <br>
 All 11 TR-909 sounds at 44.1kHz <br>
@@ -34,6 +34,7 @@ MIDI Out - Tempo/Start/Stop/Note play. Tested using Roland JU-06A, Arturia Micro
 MIDI PPQN change, for devices with different clock timings. <br> 
 <br>
 88% prog memory used - other old skool drumkits can be exchanged in Drums.h <br>
+Thanks to Jack Wildchurch for the usability emphasis and code testing! <br>
 
 Freshly uploaded - Drum Machines.zip <br>
 It contains replacement Drums.h files for TR-909, TR-808, TR-707, DMX, CR-78 and LM-1 <br>
