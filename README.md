@@ -9,7 +9,11 @@ Download Drum Machines.zip for various alternative sample sets <br>
 <br>
 <br>
 
-The project uses a Wemos D1 Mini (ESP8266), a 16 port 4067 multiplexer, a MAX98357A DAC and any Arduino (for handling MIDI messages). <br>
+The project uses - <br>
+Wemos D1 Mini (ESP8266) <br>
+16 port 4067 multiplexer <br>
+MAX98357A DAC <br>
+Any Arduino (for handling MIDI messages). <br>
 Thanks to Jack Wildchurch for the usability emphasis and code testing!
 
 Currently - <br>
