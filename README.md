@@ -4,13 +4,12 @@ Archive.org link:<br>
 https://web.archive.org/web/20190917184506/http://blog.dspsynth.eu/audio-hacking-on-the-esp8266/ <br>
 <br>
 
-Download ESP-909.zip for the code <br>
+Download ESP-909.zip for the ESP8266 and Arduino code <br>
 Download Drum Machines.zip for various alternative sample sets <br>
 <br>
 <br>
 
-The project uses a Wemos D1 Mini (ESP8266) and a 16 port 4067 multiplexer <br>
-Optionally, a MAX98357A DAC will output crisp clean audio, but also needs an Arduino for handling MIDI messages. <br>
+The project uses a Wemos D1 Mini (ESP8266), a 16 port 4067 multiplexer, a MAX98357A DAC and any Arduino (for handling MIDI messages). <br>
 Thanks to Jack Wildchurch for the usability emphasis and code testing!
 
 Currently - <br>
@@ -31,7 +30,7 @@ Play through - play drum sounds over the top of a pattern, without recording the
 Reset button (GND and RST) Surprisingly handy during a session <br>
 MIDI Out - Tempo/Start/Stop/Note play. Tested using Roland JU-06A and Roland TB-03 <br>
 MIDI PPQN change, for devices with different clock timings. <br> 
-Also, the drum pads allow playing nearly an octave of notes on a connected device. Handy for things with no keyboard. <br>
+<br>
 88% prog memory used - other old skool drumkits can be exchanged in Drums.h <br>
 
 Freshly uploaded - Drum Machines.zip <br>
@@ -39,7 +38,7 @@ It contains replacement Drums.h files for TR-909, TR-808, TR-707, DMX, CR-78 and
 
 Fritzing or similar schematic to be uploaded. <br>
 A quick guide Manual has been uploaded (to be converted to PDF) <br>
-Code is commented, with full connections listed. <br>
+Code is commented, with full connections listed. <br><br>
 Demo's- <br>
 FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work. <br>
 Simulation.mp3 salutes William Shatner's trip into space aboard the Blue Origin spaceship. It uses a TR-808 sample set and no DAC.<br>
