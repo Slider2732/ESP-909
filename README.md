@@ -35,7 +35,7 @@ Also, the drum pads allow playing nearly an octave of notes on a connected devic
 88% prog memory used - other old skool drumkits can be exchanged in Drums.h <br>
 
 Freshly uploaded - Drum Machines.zip <br>
-It contains replacement Drums.h files for TR-909, TR-808, TR-707, DMX and CR-78 <br>
+It contains replacement Drums.h files for TR-909, TR-808, TR-707, DMX, CR-78 and LM-1 <br>
 
 Fritzing or similar schematic to be uploaded. <br>
 A quick guide Manual has been uploaded (to be converted to PDF) <br>
