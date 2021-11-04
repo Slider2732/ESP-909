@@ -13,7 +13,7 @@ The project uses - <br>
 Wemos D1 Mini (ESP8266) <br>
 16 port 4067 multiplexer <br>
 MAX98357A DAC <br>
-Any Arduino (for handling MIDI messages). <br>
+Any Arduino (for handling MIDI messages) <br>
 Thanks to Jack Wildchurch for the usability emphasis and code testing!
 
 Currently - <br>
