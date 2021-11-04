@@ -2,11 +2,9 @@
 Building upon Jan Ostman's Arduino IDE drum machine codebase for the ESP8266. <br>
 Archive.org link:<br>
 https://web.archive.org/web/20190917184506/http://blog.dspsynth.eu/audio-hacking-on-the-esp8266/ <br>
-<br>
 
 Download ESP-909.zip for the ESP8266 and Arduino code <br>
 Download Drum Machines.zip for various alternative sample sets <br>
-<br>
 <br>
 
 The project uses - <br>
