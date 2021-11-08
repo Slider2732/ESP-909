@@ -34,7 +34,7 @@ MIDI Out - Start/Clock/Stop. Tested using Roland JU-06A, Arturia MicroBrute and 
 MIDI PPQN change, for devices with different clock timings. <br> 
 <br>
 Other old skool drumkits can be exchanged in Drums.h <br>
-Thanks to Jack Wildchurch for the cartridge idea and code testing! <br>
+
 
 Freshly uploaded - Drum Machines.zip <br>
 It contains replacement Drums.h files for TR-909, TR-808, TR-707, DMX, CR-78 and LM-1 <br>
@@ -49,3 +49,12 @@ DAC-MIDI is the first run of the Arduino MIDI code working. The end glitch has s
 
 
 <img src ="./ESP-909_s.JPG" raw=true />
+<br> <br>
+
+
+Thanks to Jack Wildchurch for the cartridge idea and code testing! <br>
+Here is his very cool build of an ESP-909 <br>
+<img src ="./JWbuild.jpg" raw=true />
+<br> <br>
+
+
