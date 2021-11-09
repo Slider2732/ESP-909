@@ -5,6 +5,7 @@ https://web.archive.org/web/20190917184506/http://blog.dspsynth.eu/audio-hacking
 
 Download ESP-909.zip for the ESP8266 and Arduino code <br>
 Download Drum Machines.zip for various alternative sample sets <br>
+The 3 branches of the project contain this main code page, a builds area and a sound demo's area.
 <br>
 
 The project uses - <br>
