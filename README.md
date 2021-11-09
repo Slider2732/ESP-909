@@ -54,7 +54,7 @@ TR-909 and TR-808 kit examples can also be heard <br>
 
 
 Thanks to Jack Wildchurch for the cartridge idea and code testing! <br>
-Here is his very cool build of an ESP-909 <br>
+Here is his very cool build of an ESP-909 Evolution<br>
 <img src ="./JWbuild.jpg" raw=true />
 <br> <br>
 
