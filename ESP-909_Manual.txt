@@ -38,7 +38,7 @@ When ready to record, press the Record/Live mode button.
 Tempo can be set with the relevant pot, BPM indication is with a flash of the LED on positions 1, 9 and 11 of the 16 part pattern.
 Tempo can also be set with the Tap Tempo feature detailed below.
 Each drum sound will be quantized to 1/16th of the pattern.
-If unhappy with a sound, press the same button again to remove it (easiest if the tempo is temporarily lowered).
+If unhappy with a sound, press the same button again to remove it.
 To swap to pattern 2, press the Function button while pattern 1 is playing. 
 To return to Live mode, press the Record/Live mode button at any time. 
 To reset the drum machine, press the Reset button.
@@ -109,7 +109,7 @@ Or, drum key 5 (High Tom) and Function at the same time to increase the amount.
 
 Metronome
 ---------
-The metronome is attached to port 13 of the Wemos microcontroller.
+The metronome is attached to port 13 of the multiplexer.
 When the attached key is pressed, the metronome changes state, on or off.
 The metronome key can be pressed at any time while in Play mode. The pattern being played will reset to position 1 and the metronome will either be heard or silent. 
 Note - Switching on and off will affect both patterns. 
@@ -128,15 +128,15 @@ A central dead zone is implemented of 44.1kHz, allowing a quick and easy return 
 
 MIDI
 ----
-MIDI In and Out are implemented, but so far only MIDI Out is working on both non DAC and DAC versions.
+MIDI In and Out are implemented, but so far only MIDI Out is working.
 This manual will be updated when it's fixed. 
-MIDI commands in both directions will be Start, Stop, Pause and Note data. 
-At the moemnt, those commands work on pin D4 for MIDI Out.
-MIDI Start, Clock and Stop work with the Fake MIDI sketch and extra Arduino connected.
+MIDI commands in both directions will be Start, Clock and Stop. 
+Implemntation is via any Arduino. ESP-909 Wemos pins D5 and D6 output and input pulses to the Arduino, which converts them to MIDI. Input and output of MIDI data is by using the Arduino's Serial connection (which is unavailable on the Wemos and hence the use of an Arduino). It is termed 'Fake MIDI'. Fake MIDI emulates MIDI to the connected MIDI device. On receipt of a pulse, the Arduino sends a MIDI Start message, then MIDI Clocks at the pulses rate received from the Wemos. When ESP-909 stops, the Arduino will send a MIDI Stop.   
+
 There is an ability to change the PPQN, if a slave device uses a different amount than 24.
 Press drum key 6 (Rimshot) and Function to step through and test various PPQN amounts in Live mode. 
 If the correct PPQN cannot be found, the code line to change is within the LivePlay() void. 
-MIDI has been tested with a Roland TB-03 and Roland JU06A.
+MIDI has been tested with a Roland TB-03, Roland JU-06A, Arturia Microbrute and reportedly successfully by Jack Wildchurch with a BOSS DR-550.
 
 
 
@@ -150,8 +150,8 @@ With reference to the prototype build picture on Github.
 Components required -
 Wemos D1 Mini (ESP8266)
 HC4067 16 port multiplexer
-Optional MAX98357A DAC
-Optional Arduino to handle DAC optioned MIDI messages
+MAX98357A DAC
+Arduino to handle MIDI messages
 15 momentary action buttons
 2x 10K pot (a third may be used for volume)
 MIDI circuit (Sparkfun/Adafruit etc, or homemade)
@@ -161,27 +161,14 @@ MIDI circuit (Sparkfun/Adafruit etc, or homemade)
 2 pin connector 
 Large perfboard (12cm x 18cm)
 
-A note about building with or without a DAC -
-Using no DAC will output sound on the RX pin of the Wemos. The advantages include a simpler build and direct MIDI Out abilities, using pin D4 of the Wemos. Disadvantages are that the sound is far inferior, with noise evident on the decay portions of sounds.
 Using a DAC brings a clean and solid output to an ESP-909 build. A disadvantage, is that no Serial method seems to work, due to the DAC taking over a pin of each Serial port. The solution, is to use what I've termed Fake MIDI, using any Arduino compatible microprocessor. Anything will work, from an ATTINY, to bare ATMEL328P, to Arduino Nano. The testing setup here uses an Arduino Nano.
 Connections to the Arduino are +5V, Gnd, Wemos pin D5 to Arduino pin 2, Wemos pin D6 to pin 3. Arduino TX goes to your MIDI shields Send pin. An LED output is provided on Arduino Nano pin 10, to display when MIDI data is being sent or not. All pins can be set at the top of the ESP-909FakeMIDI.ino sketch.     
 
 All Wemos connections can be run to a cartridge type system.
 The Wemos ESP8266 pins connect to 16 pins on the edge of a perfbooard piece. 
 Doing so, allows the swapping in and out of different drum machine sounds. Each drum machine being contained on a Wemos microcontroller.  
-Sound banks currently being constructed are for Roland TR-909, TR-808, TR-707, CR-78, Oberheim DMX and Linn LM-1. Sound banks will be available on the same Github repository. You can also create or mix and match your own. 
+Sound banks currently being constructed are for Roland TR-909, TR-808, TR-727, TR-707, TR-606, CR-78, Oberheim DMX and Linn LM-1. Sound banks will be available on the same Github repository. You can also create or mix and match your own. 
 
-The layout is up to you, here is how the prototype circuit is arranged -
-Top left is the Wemos D1 Mini, connected as a TR-909 cartridge. 
-Output audio is at the rear, from the DAC or RX pin. A 2 pin header connector is a simple way to enable or disable the RX pin for code uploads. 
-Bottom left is the MIDI circuit. 
-Top right is the Reset button, connected to GND and RST on the Wemos D1 Mini.
-Top left is the status LED and On/Off switch.
-Middle are the Tempo pot (10K), Swing pot (10K) and volume pot (10K).  
-Middle right are the Metronome and Record/Live mode buttons.
-A low pass filter circuit is on a pot in this area.
-Bottom row is for the drum sounds, 1 button per sound, matching the placement of the TR-909 drum sounds. 
-Bottom row right, is the Function button.
 Due to the multiplexer having capacitance properties, you may find that low height buttons will trigger another sound as well. The fix, is to use taller buttons, increase spacings, or, use PC key switches and caps. The prototype build was found to suffer from the issue, buttons being replaced by ALPS key switches from a late 1980's busted laptop. 
 
 
