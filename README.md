@@ -46,7 +46,7 @@ Code is commented, with full connections listed. <br><br>
 Demo's- <br>
 FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work <br>
 Simulation.mp3 salutes William Shatner's trip into space aboard the Blue Origin spaceship. It uses a TR-808 sample set and no DAC<br>
-TR-909 and TR-808 kit examples can also be heard <br>
+Various classic machines drum kit examples can also be heard, as implemented on ESP-909 <br>
 
 
 <img src ="./ESP-909_s.JPG" raw=true />
