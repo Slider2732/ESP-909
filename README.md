@@ -38,7 +38,7 @@ Other old skool drumkits can be exchanged in Drums.h <br>
 
 
 Freshly uploaded - Drum Machines.zip <br>
-It contains replacement Drums.h files for TR-909, TR-808, TR-727, TR-707, TR-606, DMX, CR-78 and LM-1 <br>
+It contains replacement Drums.h files for TR-909, TR-808, TR-727, TR-707, TR-606, Drumtraks, DMX, CR-78 and LM-1 <br>
 
 Fritzing or similar schematic to be uploaded. <br>
 A quick guide Manual has been uploaded (to be converted to PDF) <br>
