@@ -13,6 +13,7 @@ Tempo
 Swing (shuffle)
 Metronome
 Pitch Shifting
+Save/Load patterns
 MIDI
 Construction notes
 Practical Workflow
@@ -126,6 +127,15 @@ The new speed is implemented at each pattern loop start.
 A central dead zone is implemented of 44.1kHz, allowing a quick and easy return to the correct playing speed of the samples. 
 
 
+Save/Load Patterns
+------------------
+Access to saving and loading of patterns is within the Live mode.
+Press the Open HiHat key (key 9) drum key to Save both patterns. After approximately 3 seconds, the files will have been written and the drum machine will return to the Play mode. 
+To load a previous saved pattern(s), enter Live mode, then press the Crash cymbal key (key 10). Both patterns 1 and 2 will load from the EEPROM storage area. The drummachine will then return to Play mode.
+Note - Loading will overwrite both patterns 1 and 2 of the current session.
+Note - The EEPROM area has a 100,000 write cycle life. That equates to around 10 pattern saves per day, for 27 years!
+  
+
 MIDI
 ----
 MIDI In and Out are implemented, but so far only MIDI Out is working.
@@ -224,7 +234,6 @@ The rest of the parts of the pattern(s) are then added.
 Pressing drum key 11 and Function allows play through, for fills and extras during pattern playback.   
 The pattern is recorded to a Zoom R8 8 track recorder, along with anything connected to MIDI.
 Quick, logical and effective is the aim.   
-
 
 
 Adding your own samples
