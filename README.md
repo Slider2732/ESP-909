@@ -16,7 +16,7 @@ Any Arduino (for handling MIDI messages) <br>
 
 
 Currently - <br>
-All 11 TR-909 sounds at 44.1kHz <br>
+All 11 TR-909 sounds at 44.1kHz - and many other classic drum machines can be added <br>
 2 different user creatable patterns at a pot selected tempo <br>
 16th's pattern length <br>
 Live mode and Record mode  <br>
@@ -27,17 +27,18 @@ Pitch shifting, on the fly <br>
 Pattern Change, on the fly <br>
 Pattern Copy, from pattern 1 to pattern 2 <br>
 Pattern Chain, add pattern 2 to the end of pattern 1 <br>
+Pattern Save and Load (needs improvement for multiple drums at the same position) <b>
 Beat delete, by pressing the same drum button at the same pattern location <br>
 Swing - crudimentarily implemented. Intention is to follow Roger Linn's % method <br>
 Play through - play drum sounds over the top of a pattern, without recording them <br>
 Reset button (GND and RST) Surprisingly handy during a session <br>
-MIDI Out - Start/Clock/Stop. Tested using Roland JU-06A, Arturia MicroBrute, Roland TB-03 and BOSS DR-550<br>
+MIDI Out - Start/Clock/Stop. Tested using Roland JU-06A, Arturia MicroBrute, Roland TB-03, BOSS DR-550 and more<br>
 MIDI PPQN change, for devices with different clock timings. <br> 
 <br>
 Other old skool drumkits can be exchanged in Drums.h <br>
 
 
-More sounds - Drum Machines.zip <br>
+More drum kits - Drum Machines.zip <br>
 It contains replacement Drums.h files for TR-909, TR-808, TR-727, TR-707, TR-606, Drumtraks, DMX, CR-78 and LM-1 <br>
 Fresh additions - Drumulator, SP-12 and a Ludwig vintage real drumkit!
 <br>
@@ -45,7 +46,7 @@ Fresh additions - Drumulator, SP-12 and a Ludwig vintage real drumkit!
 Fritzing or similar schematic to be uploaded. <br>
 A quick guide Manual has been uploaded (to be converted to PDF) <br>
 Code is commented, with full connections listed. <br><br>
-Demo's- <br>
+Demo's - <br>
 FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work <br>
 Simulation.mp3 salutes William Shatner's trip into space aboard the Blue Origin spaceship. It uses a TR-808 sample set and no DAC<br>
 Various classic machines drum kit examples can also be heard, as implemented on ESP-909 <br>
