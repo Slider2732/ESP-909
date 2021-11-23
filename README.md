@@ -27,7 +27,7 @@ Pitch shifting, on the fly <br>
 Pattern Change, on the fly <br>
 Pattern Copy, from pattern 1 to pattern 2 <br>
 Pattern Chain, add pattern 2 to the end of pattern 1 <br>
-Pattern Save and Load (needs improvement for multiple drums at the same position) <br>
+Pattern Save and Load - saving up to 4 drum sounds, per step, on both patterns! <br>
 Beat delete, by pressing the same drum button at the same pattern location <br>
 Swing - crudimentarily implemented. Intention is to follow Roger Linn's % method <br>
 Play through - play drum sounds over the top of a pattern, without recording them <br>
