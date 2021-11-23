@@ -33,15 +33,17 @@ Press key 2 (Snare) along with Function to execute Pattern Chain.
 Press key 3 (Low Tom) along with Function to enter Tap Tempo mode.
 Press key 4 (Mid Tom) along with Function to lower Swing amount.
 Press key 5 (High Tom) along with Function to increase Swing amount.
-Press key 10 (Ride) along with Function to enable Play Through ability.
-More features are intended to be added.
-When ready to record, press the Record/Live mode button.
-Tempo can be set with the relevant pot, BPM indication is with a flash of the LED on positions 1, 9 and 11 of the 16 part pattern.
+Press key 9 (Open HiHat) along with Function to Save both patterns to EEPROM.
+Press key 10 (Crash) along with Function to Load previously saved patterns.
+Press key 11 (Ride) along with Function to enable Play Through ability.
+
+When ready to record, press the Record/Live mode key.
+Tempo can be set with the dedicated pot, BPM indication is with a flash of the LED on positions 1, 9 and 11 of the 16 part pattern.
 Tempo can also be set with the Tap Tempo feature detailed below.
 Each drum sound will be quantized to 1/16th of the pattern.
-If unhappy with a sound, press the same button again to remove it.
-To swap to pattern 2, press the Function button while pattern 1 is playing. 
-To return to Live mode, press the Record/Live mode button at any time. 
+If unhappy with a sound, press the same key at the same place again to remove it.
+To swap to pattern 2, press the Function key while pattern 1 is playing. 
+To return to Live mode, press the Record/Live mode key at any time. 
 To reset the drum machine, press the Reset button.
 
 
@@ -110,8 +112,8 @@ Or, drum key 5 (High Tom) and Function at the same time to increase the amount.
 
 Metronome
 ---------
-The metronome is attached to port 13 of the multiplexer.
-When the attached key is pressed, the metronome changes state, on or off.
+The metronome key is attached to port 13 of the multiplexer.
+When the key is pressed, the metronome changes state, on or off.
 The metronome key can be pressed at any time while in Play mode. The pattern being played will reset to position 1 and the metronome will either be heard or silent. 
 Note - Switching on and off will affect both patterns. 
 The metronome is off by default.
@@ -131,8 +133,9 @@ Save/Load Patterns
 ------------------
 Access to saving and loading of patterns is within the Live mode.
 Press the Open HiHat key (key 9) drum key to Save both patterns. After approximately 3 seconds, the files will have been written and the drum machine will return to the Play mode. 
-To load a previous saved pattern(s), enter Live mode, then press the Crash cymbal key (key 10). Both patterns 1 and 2 will load from the EEPROM storage area. The drummachine will then return to Play mode.
-Note - Loading will overwrite both patterns 1 and 2 of the current session.
+To load previously saved patterns, enter Live mode, then press the Crash cymbal key (key 10). Both patterns 1 and 2 will load from the EEPROM storage area. The drummachine will then return to Play mode, playing pattern 1 of the loaded patterns.
+Up to 4 drums can be saved per step of both 16 step patterns!
+Note - Loading will overwrite all drum data of the current session.
 Note - The EEPROM area has a 100,000 write cycle life. That equates to around 10 pattern saves per day, for 27 years!
   
 
