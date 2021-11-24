@@ -45,7 +45,8 @@ Fresh additions - Drumulator, SP-12 and a Ludwig vintage real drumkit!
 <br>
 Fritzing or similar schematic to be uploaded. <br>
 A quick guide Manual has been uploaded (to be converted to PDF) <br>
-Code is commented, with full connections listed. <br><br>
+Code is commented, with full connections listed. <br>
+<br> Build pictures of the project can be found in the Builds Branch<br>
 Demo's can be found in the Sound-demo's Branch - <br>
 FirstMIDI.mp3 is a quick demo of the sound of ESP-909, straight after getting MIDI to work <br>
 Simulation.mp3 salutes William Shatner's trip into space aboard the Blue Origin spaceship. It uses a TR-808 sample set and no DAC<br>
