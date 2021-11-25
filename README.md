@@ -40,7 +40,8 @@ Other old skool drumkits can be exchanged in Drums.h <br>
 
 More drum kits - Drum Machines.zip <br>
 It contains replacement Drums.h files for TR-909, TR-808, TR-727, TR-707, TR-606, Drumtraks, DMX, CR-78 and LM-1 <br>
-Fresh additions - Drumulator, SP-12 and a Ludwig vintage real drumkit!
+Plus new ones - Drumulator, SP-12 and a Ludwig vintage real drumkit! <br>
+and Thanksgiving 2021 uploads of - Rock drum kit, Minipops 7 <br>
 <br>
 <br>
 Fritzing or similar schematic to be uploaded. <br>
